@@ -1,0 +1,145 @@
+body{
+    overflow-x:hidden;
+    overflow-y:hidden;
+    margin: 0;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -user-drag: none;
+}
+
+#canvasDiv{
+    z-index: 1;
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#leftImgDiv{
+    z-index: 2;
+    width: 20vw;
+    top: 0vw;
+    left: 5vw;
+    position: absolute;
+    text-align: center;
+}
+
+#centerImgDiv{
+    z-index: 2;
+    width: 40vw;
+    top: 0vw;
+    left: 30vw;
+    position: absolute;
+    text-align: center;
+}
+
+#rightImgDiv{
+    z-index: 2;
+    width: 20vw;
+    top: 0vw;
+    right: 5vw;
+    position: absolute;
+    text-align: center;
+}
+
+#backgroundImg{
+    width: 100vw;
+    height: 56.25vw;
+}
+
+#centerImg, #leftImg, #rightImg{
+    width: 30vw;
+}
+
+#nameBox{
+    width: 10vw;
+    height: 4vw;
+    top:34.9vw;
+    left: 3vw;
+    font-size: 2.5vw;
+    text-align: center;
+    vertical-align: bottom;
+
+    position: absolute;
+    z-index: 4;
+    background-color: rgb(146, 109, 106);
+    color: #fff;
+    text-shadow: 2px 2px 2px black;
+    border-color: rgb(255, 224, 233); 
+    border-style: solid;
+    border-radius: 2em;
+    font-family: 'Do Hyeon', sans-serif;
+    padding-top: 0.8vw;
+}
+
+#chatBox{
+    width: 90.5vw;
+    height: 12vw;
+    top: 35.3vw;
+
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.274);
+    color: #fff;
+    font-size: 2vw;
+    padding: 3vw;
+    text-shadow: 2px 2px 2px black;
+    border-radius: 2em;
+    border-color: rgb(255, 224, 233); 
+    border-style: solid;
+    margin: 1.5vw;
+}
+
+button{
+    visibility: hidden;
+}
+
+label{
+    color: gray;
+}
+
+label:hover{
+    color: #49c0ec;
+}
+
+#text1, #text2{
+    display: inline-block;
+}
+
+.standard{
+    opacity: 0;
+}
+.show{
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    opacity: 1 !important;
+}
+.showImmediately{
+    -webkit-transition: all 0s;
+    transition: all 0s;
+    opacity: 1;
+}
+.hide{
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    opacity: 0;
+}
+.hideImmediately{
+    -webkit-transition: all 0s;
+    transition: all 0s;
+    opacity: 1;
+}
+
+.endScreen{
+    font-size: 3vw;
+    text-align: center;
+}

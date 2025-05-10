@@ -1,0 +1,47 @@
+body{
+    overflow-x:hidden;
+    overflow-y:hidden;
+    margin: 0;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -user-drag: none;
+}
+
+#canvasDiv{
+    z-index: 1;
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+    background-color: #000;
+}
+
+#backgroundImg{
+    width: 100vw;
+    height: 56.25vw;
+    z-index: 1;
+    position: absolute;
+}
+
+#button{
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    width: 25vw;
+    height: 6vw;
+    border-radius: 30px;
+    right: 2vw;
+    top: 30vw;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    color: #FF5FA2;
+    font-size: 8vw;
+    font-family: 'Nanum Pen Script', cursive;
+}

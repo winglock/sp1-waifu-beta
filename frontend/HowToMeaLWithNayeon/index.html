@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel= "stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"> 
+    <title>나연누나와밥먹는법</title>
+    <!-- 서버 연결 상태 확인 스크립트 -->
+    <script>
+        // 페이지 로드 시 서버 연결 확인
+        window.addEventListener('DOMContentLoaded', function() {
+            fetch('/api/status')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('서버 연결 성공:', data);
+                    // 초기 해시 설정 요청
+                    return fetch('/api/initial-hash');
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success && data.initialHash) {
+                        console.log('초기 해시 수신:', data.initialHash);
+                        localStorage.setItem('currentPathHash', data.initialHash);
+                        localStorage.setItem('choicePath', JSON.stringify([]));
+                    }
+                })
+                .catch(error => {
+                    console.error('서버 연결 실패:', error);
+                    alert('백엔드 서버에 연결할 수 없습니다. 서버가 실행 중인지 확인해주세요.');
+                });
+        });
+    </script>
+    <script src="engine.js"></script>
+    <script src="scenario.js"></script>
+</head>
+<body onClick="textGame.nextPage()" id="body">
+    <div id="canvasDiv">
+        <img id="backgroundImg" src="">
+        <div id="leftImgDiv" class="ImgDiv"><img id="leftImg" src="" class="img"></div>
+        <div id="centerImgDiv" class="ImgDiv"><img id="centerImg" src="" class="img"></div>
+        <div id="rightImgDiv" class="ImgDiv"><img id="rightImg" src="" class="img"></div>
+
+        <div id="textbar">
+            <div id="nameBox"></div>
+            <div id="chatBox" class="typewriter"></div>
+        <div>
+    </div>
+    <script src="start.js"></script>
+</body>
+</html>
